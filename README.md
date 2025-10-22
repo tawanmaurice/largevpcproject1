@@ -40,3 +40,15 @@ terraform plan
 
 # Apply changes
 terraform apply -auto-approve
+.
+├── 0-Auth.tf          # AWS provider / auth
+├── 1-vpc.tf           # VPC definition
+├── IGW.tf             # Internet Gateway
+├── route.tf           # Route tables and associations
+├── subnets.tf         # Public subnets
+├── 6-sg01-all.tf      # Security Group (HTTP + SSH)
+├── 7-ec2.tf           # Web EC2 instance + user data
+├── variables.tf       # Variable declarations
+├── terraform.tfvars   # Variable values (IP, key pair, etc.)
+├── outputs.tf         # Outputs (public DNS, URL)
+├── versions.tf        # Provider version constraints
